@@ -190,3 +190,19 @@ Gotcha, we found the password to connect to the user violet and get the flag. <b
 
 ![Screenshot 2023-08-01 044947](https://github.com/elshiraphine/hackmyvm.eu/assets/89353307/9a9b231f-4005-4e2d-b7f4-b843df8e54ea)
 
+### 011 - Violet
+
+Let's move to mission #11, the mission said that the password of the user lucy is in the line that ends with 0JuAZ (these last 5 characters are not part of her password).<br />
+
+![Screenshot 2023-08-01 043913](https://github.com/elshiraphine/hackmyvm.eu/assets/89353307/ac2e24b8-4e1d-43eb-b18a-96316f5dac5f)
+
+
+So, let's just grep the string that have a `0JuAZ` substring. Using the same approach as previous mission, let's remove the last 5 characters using substr method in awk.
+
+```sh
+cat end | grep 0JuAZ | awk '{print substr($1, 1, length($1)-5); }'
+```
+
+Then, use the password to login with user lucy and cat the flag. <br />
+
+![Screenshot 2023-08-01 044947](https://github.com/elshiraphine/hackmyvm.eu/assets/89353307/4a16b970-cfef-4ee1-96eb-470e647bcd75)
