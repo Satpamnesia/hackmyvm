@@ -55,7 +55,7 @@ the contents of imp.txt are as shown in the image below.
 
 ![image](https://iili.io/HtUFwtj.png)
 
-i've created a script to brute force the password for that username using the rockyou dictionary, but nothing seems to work. perhaps it's taking too long? im not sure.
+i've created a script to brute force the password for those usernames using the rockyou dictionary, but nothing seems to work. perhaps it's taking too long? im not sure.
 
 ```sh
 #! /bin/env bash
